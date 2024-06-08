@@ -1,0 +1,7 @@
+.header {
+  background-color: #3d4d6a;
+  color: #fff;
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}

@@ -1,0 +1,24 @@
+.socialLinks {
+  margin-top: 30px;
+}
+
+.socialLinks a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 10px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.socialLinks a:hover {
+  background: #1ba152;
+  color: #fff;
+  text-decoration: none;
+}
