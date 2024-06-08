@@ -33,7 +33,7 @@ const Navbar = () => {
   };
   return (
     <div>
-      <Layout className="layout shadow-lg w-full   ">
+      <Layout className="layout shadow-lg w-full fixed top-0  ">
         <Header className={`flex items-center py-12 ${style.header}`}>
           <Content>
             <Link href="/">

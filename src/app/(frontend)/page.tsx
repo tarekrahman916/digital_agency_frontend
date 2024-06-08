@@ -1,9 +1,11 @@
+import Banner from "@/components/frontend/home/Banner/Banner";
 import React from "react";
 
 const HomePage = () => {
   return (
     <div>
-      <h1 className="text-green-800">Home Page</h1>
+      {/* Banner */}
+      <Banner />
     </div>
   );
 };
