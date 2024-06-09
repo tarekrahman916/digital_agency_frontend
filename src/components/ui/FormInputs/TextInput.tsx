@@ -18,7 +18,7 @@ export default function TextInput({
   errors,
   isRequired = true,
   type = "text",
-  className = "sm:col-span-2 mb-5",
+  className = "sm:col-span-2 ",
   defaultValue = "",
 }: ITextInput) {
   return (

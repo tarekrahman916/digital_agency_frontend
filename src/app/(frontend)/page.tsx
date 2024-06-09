@@ -4,6 +4,7 @@ import Client from "@/components/frontend/home/Client/Client";
 import ContactSection from "@/components/frontend/home/ContactSection/ContactSection";
 import Faq from "@/components/frontend/home/Faq/Faq";
 import HomePortfolio from "@/components/frontend/home/HomePortfolio/HomePortfolio";
+import HomeTestimonial from "@/components/frontend/home/HomeTestimonial/HomeTestimonial";
 import Services from "@/components/frontend/home/Services/Services";
 import React from "react";
 
@@ -22,6 +23,8 @@ const HomePage = () => {
       <HomePortfolio />
       {/* Faq */}
       <Faq />
+      {/* Testimonial */}
+      <HomeTestimonial />
       {/* Contact */}
       <ContactSection />
     </div>
