@@ -1,0 +1,13 @@
+.clients {
+  background-color: color-mix(in srgb, #37517e, transparent 95%);
+  padding: 12px 0;
+}
+
+.clients .slideImg {
+  transition: 0.3s;
+  padding: 0 10px;
+}
+
+.clients .slideImg:hover {
+  transform: scale(1.1);
+}

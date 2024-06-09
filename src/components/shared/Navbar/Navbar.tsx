@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Button, Drawer, Layout, Menu, Typography } from "antd";
-import { AlignJustify } from "lucide-react";
+import { Button, Drawer, Dropdown, Layout, Menu, Typography } from "antd";
+import { AlignJustify, ArrowBigDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -33,7 +33,7 @@ const Navbar = () => {
   };
   return (
     <div>
-      <Layout className="layout shadow-lg w-full fixed top-0  ">
+      <Layout className="layout shadow-lg w-full z-50 fixed top-0  ">
         <Header className={`flex items-center py-12 ${style.header}`}>
           <Content>
             <Link href="/">
