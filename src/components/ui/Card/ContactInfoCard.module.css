@@ -1,0 +1,12 @@
+.infoIcon {
+  font-size: 20px;
+  color: #16a34a;
+  background: color-mix(in srgb, #16a34a, transparent 50%);
+  transition: all 0.3s ease-in-out;
+  background: white;
+}
+
+.infoCard:hover .infoIcon {
+  background: #1aa150;
+  color: white;
+}
