@@ -5,11 +5,14 @@ import PrimaryHeading from "@/components/ui/Heading/PrimaryHeading";
 import Card from "@/components/ui/Card/Card";
 
 const Services = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/services", {
-    next: {
-      revalidate: 30,
-    },
-  });
+  const res = await fetch(
+    "https://service-provider-backend.vercel.app/api/v1/services",
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
+  );
   const { data: services } = await res.json();
 
   return (

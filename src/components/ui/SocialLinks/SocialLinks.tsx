@@ -1,20 +1,20 @@
 import { Facebook, Instagram, Linkedin, TwitterIcon } from "lucide-react";
 import style from "./SocialLinks.module.css";
 
-const SocialLinks = () => {
+const SocialLinks = ({ className }: { className?: any }) => {
   return (
     <div>
       <div className={`${style.socialLinks}`}>
-        <a href="#" className="">
+        <a href="#" className={className && className}>
           <Facebook />
         </a>
-        <a href="#" className="facebook">
+        <a href="#" className={className && className}>
           <TwitterIcon />
         </a>
-        <a href="#" className="instagram">
+        <a href="#" className={className && className}>
           <Instagram />
         </a>
-        <a href="#" className="google-plus">
+        <a href="#" className={className && className}>
           <Linkedin />
         </a>
       </div>

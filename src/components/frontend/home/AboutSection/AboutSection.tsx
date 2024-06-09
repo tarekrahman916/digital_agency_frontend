@@ -4,6 +4,7 @@ import img from "@/assets/Revenue-bro.png";
 import Image from "next/image";
 import { CirclePlus, MoveRight } from "lucide-react";
 import SecondaryButton from "@/components/ui/Button/SecondaryButton";
+import CountUpInfo from "@/components/shared/CountUpInfo/CountUpInfo";
 
 const AboutSection = () => {
   return (
@@ -61,6 +62,7 @@ const AboutSection = () => {
           />
         </div>
       </div>
+      <CountUpInfo />
     </div>
   );
 };

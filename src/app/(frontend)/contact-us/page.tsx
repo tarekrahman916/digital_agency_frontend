@@ -1,11 +1,11 @@
+import ContactForm from "@/components/shared/ContactForm/ContactForm";
 import ContactInfoCard from "@/components/ui/Card/ContactInfoCard";
 import PrimaryHeading from "@/components/ui/Heading/PrimaryHeading";
 import SocialLinks from "@/components/ui/SocialLinks/SocialLinks";
 import { Mail, MapPin, Phone } from "lucide-react";
-import style from "./ContactSection.module.css";
-import ContactForm from "@/components/shared/ContactForm/ContactForm";
+import React from "react";
 
-const ContactSection = () => {
+const page = () => {
   const infos = [
     {
       title: "Location",
@@ -24,13 +24,13 @@ const ContactSection = () => {
     },
   ];
   return (
-    <div className={`pt-20 lg:px-16 px-6 pb-8 ${style.contactSection}`}>
-      <PrimaryHeading title="Contact" />
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
-        {/* Contact Inform */}
-        <div
-          className={` px-3 rounded-md  border-l-4 border-[#1aa150] ${style.infoSection}`}
-        >
+    <div className="pt-40 lg:px-16 px-6">
+      <PrimaryHeading
+        title="Get in touch"
+        des="Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit"
+      />
+      <div className="">
+        <div className="grid lg:grid-cols-4 grid-cols-2">
           {infos.map((info, i) => {
             return (
               <ContactInfoCard
@@ -41,14 +41,11 @@ const ContactSection = () => {
               />
             );
           })}
-          <div className="ml-8">
-            <SocialLinks className={`bg-gray-700 hover:bg-green-600 `} />
-          </div>
+
+          <SocialLinks className={`bg-gray-700 hover:bg-green-600`} />
         </div>
         {/* Contact Form */}
-        <div
-          className={` px-3 rounded-md lg:border-l-4 lg:border-[#1aa150] ${style.infoSection}`}
-        >
+        <div className="">
           <ContactForm />
         </div>
       </div>
@@ -56,4 +53,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default page;

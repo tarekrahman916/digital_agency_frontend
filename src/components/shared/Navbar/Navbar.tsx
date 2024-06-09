@@ -15,8 +15,8 @@ const items = [
   { key: "1", label: "Home", href: "/" },
   { key: "2", label: "Services", href: "/services" },
   { key: "3", label: "Portfolio", href: "/portfolio" },
-  { key: "4", label: "About Us", href: "/about" },
-  { key: "5", label: "Contact Us", href: "/contact" },
+  { key: "4", label: "About Us", href: "/about-us" },
+  { key: "5", label: "Contact Us", href: "/contact-us" },
   // { key: "2", label: "Dashboard", href: "/dashboard" },
 ];
 

@@ -6,6 +6,7 @@ import Faq from "@/components/frontend/home/Faq/Faq";
 import HomePortfolio from "@/components/frontend/home/HomePortfolio/HomePortfolio";
 import HomeTestimonial from "@/components/frontend/home/HomeTestimonial/HomeTestimonial";
 import Services from "@/components/frontend/home/Services/Services";
+
 import React from "react";
 
 const HomePage = () => {
@@ -19,6 +20,7 @@ const HomePage = () => {
       <Services />
       {/* About Section */}
       <AboutSection />
+
       {/* PortFolio */}
       <HomePortfolio />
       {/* Faq */}
