@@ -19,7 +19,7 @@ const Card = ({ service }: { service: Service }) => {
       />
       <div className="flex flex-col   space-y-4 w-full  ">
         <div className="space-y-2 px-2">
-          <h2 className="text-2xl font-bold text-center">{service.name}</h2>
+          <h2 className="text-xl font-bold text-center">{service.name}</h2>
           <p className="dark:text-gray-100 text-base  text-center w-full">
             {service.description.length > 80
               ? service.description.slice(0, 80) + "..."

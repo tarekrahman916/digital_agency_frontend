@@ -22,35 +22,37 @@ const AboutSection = () => {
         </div>
         <div className="lg:w-[60%]">
           <p className="text-gray-800 text-[17px] font-medium tracking-wide text-justify">
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
+            At Techneto It, we are dedicated to transforming your digital
+            presence through innovative web development and strategic digital
+            marketing solutions. With a passionate team of experts, we pride
+            ourselves on delivering customized services that drive success and
+            growth for your business.
           </p>
           <ul className=" space-y-3 text-gray-700 mt-6 list-inside dark:text-gray-400">
             <li className="flex items-center space-x-2 ">
               <CirclePlus className="text-[#1AA150]" />
               <span className="tracking-wide">
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                We stay ahead of industry trends to provide cutting-edge
+                solutions.
               </span>
             </li>
             <li className="flex items-center space-x-2 ">
               <CirclePlus className="text-[#1AA150]" />
               <span className="tracking-wide">
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                We build trust through transparency and honest communication.
               </span>
             </li>
             <li className="flex items-center space-x-2 ">
               <CirclePlus className="text-[#1AA150]" />
               <span className="tracking-wide">
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                We believe in the power of teamwork and partnership.
               </span>
             </li>
             <li className="flex items-center space-x-2  ">
               <CirclePlus className="text-[#1AA150]" />
               <span className="tracking-wide">
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                We strive for excellence in everything we do, ensuring
+                high-quality outcomes.
               </span>
             </li>
           </ul>

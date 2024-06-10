@@ -34,7 +34,9 @@ const Navbar = () => {
   return (
     <div>
       <Layout className="layout shadow-lg w-full z-50 fixed top-0  ">
-        <Header className={`flex items-center py-12 ${style.header}`}>
+        <Header
+          className={`flex items-center lg:px-16 px-5 py-12 ${style.header}`}
+        >
           <Content>
             <Link href="/">
               <Title className="m-0 text-2xl flex items-center">
@@ -72,7 +74,12 @@ const Navbar = () => {
           >
             <AlignJustify />
           </Button>
-          <Drawer title="Menu" onClose={onClose} open={open}>
+          <Drawer
+            title="Menu"
+            onClose={onClose}
+            open={open}
+            className="w-[70%] fixed right-0  "
+          >
             <Menu
               className="lg:hidden block bg-transparent"
               disabledOverflow
@@ -84,7 +91,7 @@ const Navbar = () => {
                   <Link
                     onClick={() => setOpen(false)}
                     href={item.href}
-                    className="text-xl"
+                    className="text-xl "
                   >
                     {item.label}
                   </Link>

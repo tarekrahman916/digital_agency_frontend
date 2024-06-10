@@ -36,7 +36,7 @@ const Client = () => {
         modules={[Autoplay]}
         breakpoints={{
           320: {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
           480: {
             slidesPerView: 3,
@@ -51,7 +51,7 @@ const Client = () => {
             slidesPerView: 6,
           },
         }}
-        className={`flex items-center  justify-center pr-20  h-auto ${style.clients}`}
+        className={`flex items-center  justify-center lg:pr-20  h-auto ${style.clients}`}
       >
         <div className="w-[90%] mx-auto">
           {clients.map((clientImg, i) => {
