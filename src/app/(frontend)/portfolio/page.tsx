@@ -1,7 +1,8 @@
-import PrimaryHeading from "@/components/ui/Heading/PrimaryHeading";
 import PortFolioCard from "@/components/ui/Card/PortFolioCard";
+import PrimaryHeading from "@/components/ui/Heading/PrimaryHeading";
+import React from "react";
 
-const HomePortfolio = () => {
+const page = () => {
   const portfolios = [
     {
       id: 1,
@@ -71,9 +72,8 @@ const HomePortfolio = () => {
     },
   ];
   return (
-    <div className={`py-20 lg:px-16 px-5`}>
-      <PrimaryHeading title="Check My Wonderful Works" />
-
+    <div className="pt-40 lg:px-16 px-5 mb-6">
+      <PrimaryHeading title="Portfolio" des="CHECK MY WONDERFUL WORKS" />
       <div className="grid  lg:grid-cols-3 grid-cols-1 gap-5 ">
         {portfolios.map((portfolio) => {
           return (
@@ -89,4 +89,4 @@ const HomePortfolio = () => {
   );
 };
 
-export default HomePortfolio;
+export default page;

@@ -4,7 +4,7 @@ import React from "react";
 
 const HomeTestimonial = () => {
   return (
-    <div className="pt-20 lg:px-16 px-6 pb-8">
+    <div className="pt-20 lg:px-16 px-5 pb-8">
       <PrimaryHeading title="What People Say About Us" />
       <Testimonial />
     </div>

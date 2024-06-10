@@ -16,12 +16,12 @@ const Services = async () => {
   const { data: services } = await res.json();
 
   return (
-    <div className="pt-20 pb-6">
+    <div className="pt-20 pb-6 lg:px-16 px-5">
       <PrimaryHeading title="Our Services" />
 
       <div
         data-aos="fade-right"
-        className="grid grid-cols-1 lg:grid-cols-4 gap-5 mx-16 "
+        className="grid grid-cols-1 lg:grid-cols-4 gap-8 "
       >
         {services.length > 4
           ? services

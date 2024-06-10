@@ -8,7 +8,7 @@ import style from "./Card.module.css";
 const Card = ({ service }: { service: Service }) => {
   return (
     <div
-      className={` rounded-md shadow-lg h-[420px] relative text-gray-800 ${style.card}`}
+      className={` rounded-md shadow-lg  h-[420px] relative text-gray-800 ${style.card}`}
     >
       <Image
         src={service.serviceImg ? service.serviceImg : image}

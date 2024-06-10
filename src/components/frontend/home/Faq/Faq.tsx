@@ -114,7 +114,7 @@ const Faq = () => {
     },
   ];
   return (
-    <div className={`py-20 lg:px-16 px-6 ${style.faqSection}`}>
+    <div className={`py-20 lg:px-16 px-5 ${style.faqSection}`}>
       <PrimaryHeading title="Frequently Asked Questions" />
       <div className="flex lg:px-20 justify-center">
         <Collapse

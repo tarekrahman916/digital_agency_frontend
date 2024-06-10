@@ -24,7 +24,7 @@ const ContactSection = () => {
     },
   ];
   return (
-    <div className={`pt-20 lg:px-16 px-6 pb-8 ${style.contactSection}`}>
+    <div className={`pt-20 lg:px-16 px-5 pb-8 ${style.contactSection}`}>
       <PrimaryHeading title="Contact" />
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
         {/* Contact Inform */}

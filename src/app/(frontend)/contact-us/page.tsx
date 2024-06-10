@@ -24,13 +24,13 @@ const page = () => {
     },
   ];
   return (
-    <div className="pt-40 lg:px-16 px-6">
+    <div className="pt-40 lg:px-32 px-5">
       <PrimaryHeading
         title="Get in touch"
-        des="Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit"
+        des=" Reach Out and Connect with Our Team of Web Development and Digital Marketing Experts"
       />
       <div className="">
-        <div className="grid lg:grid-cols-4 grid-cols-2">
+        <div className="grid lg:grid-cols-4 grid-cols-1 justify-center ">
           {infos.map((info, i) => {
             return (
               <ContactInfoCard
@@ -42,10 +42,12 @@ const page = () => {
             );
           })}
 
-          <SocialLinks className={`bg-gray-700 hover:bg-green-600`} />
+          <div className="ml-4">
+            <SocialLinks className={`bg-gray-700 hover:bg-green-600 `} />
+          </div>
         </div>
         {/* Contact Form */}
-        <div className="">
+        <div>
           <ContactForm />
         </div>
       </div>

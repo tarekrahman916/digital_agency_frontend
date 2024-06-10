@@ -81,7 +81,11 @@ const Navbar = () => {
             >
               {items?.map((item) => (
                 <Menu.Item key={item.href}>
-                  <Link href={item.href} className="text-xl">
+                  <Link
+                    onClick={() => setOpen(false)}
+                    href={item.href}
+                    className="text-xl"
+                  >
                     {item.label}
                   </Link>
                 </Menu.Item>
