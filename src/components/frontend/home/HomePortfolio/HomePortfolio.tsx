@@ -1,5 +1,6 @@
 import PrimaryHeading from "@/components/ui/Heading/PrimaryHeading";
 import PortFolioCard from "@/components/ui/Card/PortFolioCard";
+import SecondaryHeading from "@/components/ui/Heading/SecondaryHeading";
 
 const HomePortfolio = () => {
   const portfolios = [
@@ -73,6 +74,7 @@ const HomePortfolio = () => {
   return (
     <div className={`py-20 lg:px-16 px-5`}>
       <PrimaryHeading title="Check My Wonderful Works" />
+      {/* <SecondaryHeading title="Portfolio" des="CHECK MY WONDERFUL WORKS" /> */}
 
       <div className="grid  lg:grid-cols-3 grid-cols-1 gap-5 ">
         {portfolios.map((portfolio) => {

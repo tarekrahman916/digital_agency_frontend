@@ -3,6 +3,7 @@ import { Service } from "@/constant/GlobalTypes";
 import Link from "next/link";
 import PrimaryHeading from "@/components/ui/Heading/PrimaryHeading";
 import Card from "@/components/ui/Card/Card";
+import SecondaryHeading from "@/components/ui/Heading/SecondaryHeading";
 
 const Services = async () => {
   const res = await fetch(
@@ -18,6 +19,7 @@ const Services = async () => {
   return (
     <div className="pt-20 pb-6 lg:px-16 px-5">
       <PrimaryHeading title="Our Services" />
+      {/* <SecondaryHeading title="Services" des="Check Our Services" /> */}
 
       <div
         data-aos="fade-right"

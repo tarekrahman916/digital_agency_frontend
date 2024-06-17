@@ -8,8 +8,9 @@ import CountUpInfo from "@/components/shared/CountUpInfo/CountUpInfo";
 
 const AboutSection = () => {
   return (
-    <div className={`${style.about} pt-20 lg:px-16 px-5`}>
-      <PrimaryHeading title="About Us" />
+    <div className={`${style.about} pt-8 lg:px-16 px-5`}>
+      {/* <PrimaryHeading title="About Us" /> */}
+      {/* <CountUpInfo /> */}
       <div className="flex flex-col lg:flex-row space-x-8 items-center">
         <div className="lg:w-[40%] w-full">
           <Image

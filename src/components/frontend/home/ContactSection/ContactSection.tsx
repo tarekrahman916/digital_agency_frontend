@@ -4,6 +4,7 @@ import SocialLinks from "@/components/ui/SocialLinks/SocialLinks";
 import { Mail, MapPin, Phone } from "lucide-react";
 import style from "./ContactSection.module.css";
 import ContactForm from "@/components/shared/ContactForm/ContactForm";
+import SecondaryHeading from "@/components/ui/Heading/SecondaryHeading";
 
 const ContactSection = () => {
   const infos = [
@@ -26,6 +27,7 @@ const ContactSection = () => {
   return (
     <div className={`pt-20 lg:px-16 px-5 pb-8 ${style.contactSection}`}>
       <PrimaryHeading title="Contact" />
+      {/* <SecondaryHeading title="Contact" des="Get in touch" /> */}
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
         {/* Contact Inform */}
         <div

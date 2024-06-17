@@ -38,3 +38,38 @@
   bottom: 0;
   margin: auto;
 }
+
+.section_title {
+  padding-bottom: 40px;
+}
+
+.section_title h2 {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5c8eb0;
+  font-family: "Poppins", sans-serif;
+}
+
+.section_title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #1aa24d;
+  margin: 4px 10px;
+}
+
+.section_title p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #263d4d;
+}
