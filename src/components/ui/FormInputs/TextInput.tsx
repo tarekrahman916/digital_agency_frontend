@@ -1,3 +1,4 @@
+import { Input } from "antd";
 import type { UseFormRegister, FieldErrors } from "react-hook-form";
 
 interface ITextInput {

@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+button {
+  background-color: #1e293b;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }

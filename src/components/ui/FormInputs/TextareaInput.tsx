@@ -1,6 +1,8 @@
 "use client";
 import type { UseFormRegister, FieldErrors } from "react-hook-form";
+import { Input } from "antd";
 
+const { TextArea } = Input;
 type TextAreaState = {
   label: string;
   name: string;
