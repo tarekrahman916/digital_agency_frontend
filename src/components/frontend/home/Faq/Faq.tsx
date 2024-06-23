@@ -10,7 +10,7 @@ const Faq = () => {
       key: "1",
       label: (
         <div className="flex space-x-3">
-          <CircleHelp className="h-6 w-6 text-green-600" />
+          <CircleHelp className="h-6 w-6 text-green-600 shrink-0" />
           <h2 className="text-[18px] font-semibold tracking-wide text-slate-700 hover:text-green-600">
             What services does Techneto It offer ?
           </h2>
@@ -30,7 +30,7 @@ const Faq = () => {
       key: "2",
       label: (
         <div className="flex space-x-3">
-          <CircleHelp className="h-6 w-6 text-green-600" />
+          <CircleHelp className="h-6 w-6 text-green-600 shrink-0" />
           <h2 className="text-[18px] font-semibold tracking-wide text-slate-700 hover:text-green-600">
             How long does it take to develop a website?
           </h2>
@@ -51,8 +51,8 @@ const Faq = () => {
     {
       key: "3",
       label: (
-        <div className="flex space-x-3">
-          <CircleHelp className="h-6 w-6 text-green-600" />
+        <div className="flex space-x-3 ">
+          <CircleHelp className="h-6 w-6 text-green-600 shrink-0" />
           <h2 className="text-[18px] font-semibold tracking-wide text-slate-700 hover:text-green-600">
             What is your process for starting a new project?
           </h2>
@@ -73,7 +73,7 @@ const Faq = () => {
       key: "4",
       label: (
         <div className="flex space-x-3">
-          <CircleHelp className="h-6 w-6 text-green-600" />
+          <CircleHelp className="h-6 w-6 text-green-600 shrink-0" />
           <h2 className="text-[18px] font-semibold tracking-wide text-slate-700 hover:text-green-600">
             How does Techneto It ensure my website is optimized for search
             engines?
@@ -96,7 +96,7 @@ const Faq = () => {
       key: "5",
       label: (
         <div className="flex space-x-3">
-          <CircleHelp className="h-6 w-6 text-green-600" />
+          <CircleHelp className="h-6 w-6 text-green-600 shrink-0" />
           <h2 className="text-[18px] font-semibold tracking-wide text-slate-700 hover:text-green-600">
             Can you help with improving our current website?
           </h2>

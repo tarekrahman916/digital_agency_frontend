@@ -6,6 +6,7 @@ import Faq from "@/components/frontend/home/Faq/Faq";
 import HomePortfolio from "@/components/frontend/home/HomePortfolio/HomePortfolio";
 import HomeTestimonial from "@/components/frontend/home/HomeTestimonial/HomeTestimonial";
 import Services from "@/components/frontend/home/Services/Services";
+import WorkFlow from "@/components/frontend/home/WorkFlow/WorkFlow";
 
 import React from "react";
 
@@ -24,6 +25,7 @@ const HomePage = () => {
 
       {/* PortFolio */}
       <HomePortfolio />
+      <WorkFlow />
       {/* Faq */}
       <Faq />
       {/* Testimonial */}

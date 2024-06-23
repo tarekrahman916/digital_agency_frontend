@@ -31,26 +31,26 @@ const AboutSection = () => {
           </p>
           <ul className=" space-y-3 text-gray-700 mt-6 list-inside dark:text-gray-400">
             <li className="flex items-center space-x-2 ">
-              <CirclePlus className="text-[#1AA150]" />
+              <CirclePlus className="text-[#1AA150] shrink-0" />
               <span className="tracking-wide">
                 We stay ahead of industry trends to provide cutting-edge
                 solutions.
               </span>
             </li>
             <li className="flex items-center space-x-2 ">
-              <CirclePlus className="text-[#1AA150]" />
+              <CirclePlus className="text-[#1AA150] shrink-0" />
               <span className="tracking-wide">
                 We build trust through transparency and honest communication.
               </span>
             </li>
             <li className="flex items-center space-x-2 ">
-              <CirclePlus className="text-[#1AA150]" />
+              <CirclePlus className="text-[#1AA150] shrink-0" />
               <span className="tracking-wide">
                 We believe in the power of teamwork and partnership.
               </span>
             </li>
             <li className="flex items-center space-x-2  ">
-              <CirclePlus className="text-[#1AA150]" />
+              <CirclePlus className="text-[#1AA150] shrink-0" />
               <span className="tracking-wide">
                 We strive for excellence in everything we do, ensuring
                 high-quality outcomes.

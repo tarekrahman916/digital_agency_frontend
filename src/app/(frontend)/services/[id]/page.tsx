@@ -2,25 +2,36 @@ import Image from "next/image";
 import imageUrl from "@/assets/services/web.jpg";
 import SecondaryButton from "@/components/ui/Button/SecondaryButton";
 import WorkFlow from "@/components/frontend/home/WorkFlow/WorkFlow";
+import { CircleCheck, CircleCheckBig } from "lucide-react";
+import BreadCrump from "@/components/ui/BreadCrump";
 
 const page = () => {
+  const breadCrumpLinks = [
+    {
+      label: "Services",
+      href: "/services",
+    },
+  ];
   return (
     <div className="lg:px-24 px-5 pt-28">
-      <div className="flex flex-col-reverse sm:flex-row items-center gap-10 mb-5">
-        <div className="">
+      <BreadCrump breadCrumpLinks={breadCrumpLinks} title="Service" />
+      <div className="flex flex-col-reverse sm:flex-row items-center gap-10 mb-5 shadow-md  h-full p-4 rounded-lg">
+        <div className=" ">
           <h3 className="text-3xl font-bold mb-6 text-[#37517E]">
             Web Development
           </h3>
-          <p className="mb-6 text-[15px] text-slate-800">
+          <p className="lg:mb-6 text-[15px] text-slate-800">
             Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia
             aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia
             illum tempore corrupti sed eum reiciendis. Maxime modi rerum.
           </p>
-          <SecondaryButton
-            title="Hire Us"
-            href="/contact-us"
-            className="mt-8 w-1/2"
-          />
+          <div className="flex">
+            <SecondaryButton
+              title="Hire Us"
+              href="/contact-us"
+              className="mt-8 px-14"
+            />
+          </div>
         </div>
         <div className="">
           <Image
@@ -32,7 +43,7 @@ const page = () => {
           />
         </div>
       </div>
-      <p className="text-[15px] tracking-wider text-gray-700 mt-4 text-justify">
+      <p className="text-[15px] tracking-wider text-gray-700 text-justify mt-12">
         Est reprehenderit voluptatem necessitatibus asperiores neque sed ea
         illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur
         itaque nesciunt fuga. Sunt rem odit accusantium omnis perspiciatis
@@ -44,82 +55,65 @@ const page = () => {
         consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt
         qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
       </p>
-      <div className="my-6">
-        <h5 className="text-xl mb-2">Features</h5>
-        <ul className=" space-y-1 grid sm:grid-cols-2 grid-cols-1 text-gray-500 list-inside dark:text-gray-400">
-          <li className="flex items-center">
-            <svg
-              className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-            </svg>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit..
-          </li>
-          <li className="flex items-center">
-            <svg
-              className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-            </svg>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit..
-          </li>
-          <li className="flex items-center">
-            <svg
-              className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-            </svg>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit..
-          </li>
-          <li className="flex items-center">
-            <svg
-              className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-            </svg>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit..
-          </li>
-          <li className="flex items-center">
-            <svg
-              className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-            </svg>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit..
-          </li>
-          <li className="flex items-center">
-            <svg
-              className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-            </svg>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit..
-          </li>
-        </ul>
+      <div className="mb-6 mt-12">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
+          <div className="">
+            <h5 className="text-xl font-semibold mb-4">
+              What Service we provide in Web Development :
+            </h5>
+            <ul className=" space-y-2  text-gray-500 list-inside dark:text-gray-400">
+              <li className="flex items-center gap-2">
+                <CircleCheck className="w-6 h-6 text-green-600" />
+                E-commerce website
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleCheck className="w-6 h-6 text-green-600" />
+                Business website
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleCheck className="w-6 h-6 text-green-600" />
+                Portfolio website
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleCheck className="w-6 h-6 text-green-600" />
+                Online News Portal website
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleCheck className="w-6 h-6 text-green-600" />
+                All Types of Website
+              </li>
+            </ul>
+          </div>
+          <div className="">
+            <h5 className="text-xl font-semibold mb-4">Features :</h5>
+            <ul className=" space-y-2  text-gray-500 list-inside dark:text-gray-400">
+              <li className="flex items-center gap-2">
+                <CircleCheckBig className="w-5 h-5 text-green-600" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleCheckBig className="w-5 h-5 text-green-600" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleCheckBig className="w-5 h-5 text-green-600" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleCheckBig className="w-5 h-5 text-green-600" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleCheckBig className="w-5 h-5 text-green-600" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleCheckBig className="w-5 h-5 text-green-600" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </li>
+            </ul>
+          </div>
+        </div>
         <WorkFlow />
       </div>
     </div>

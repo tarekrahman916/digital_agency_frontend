@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import logo from "@/assets/main-logo.png";
 import style from "./Navbar.module.css";
+import PrimaryButton from "@/components/ui/Button/PrimaryButton";
 
 const { Header, Content } = Layout;
 const { Title } = Typography;
@@ -66,6 +67,7 @@ const Navbar = () => {
                 </Link>
               </Menu.Item>
             ))}
+            <PrimaryButton title="Hire Us" href="/contact" className="ml-6" />
           </Menu>
 
           <Button

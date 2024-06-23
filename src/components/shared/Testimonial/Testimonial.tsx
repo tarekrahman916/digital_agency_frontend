@@ -86,7 +86,7 @@ const Testimonial = () => {
                       </p>
                       <p className="text-gray-600">{item.title}</p>
                     </div>
-                    <blockquote className="w-full text-slate-700 tracking-normal text-xl font-medium text-center">
+                    <blockquote className="w-full text-slate-700 tracking-normal text-base font-medium text-center">
                       {item.description}
                     </blockquote>
                   </div>
