@@ -85,7 +85,7 @@ const page = async ({ params: { slug } }: { params: { slug: any } }) => {
           <h2 className="text-2xl font-semibold">Have a Project With Us?</h2>
           <h3 className="text-4xl text-green-600 font-bold">GET IN TOUCH!</h3>
           <SecondaryButton href="/contact" title="Hire Us" />
-          <SocialLinks className={`bg-gray-700 hover:bg-green-600 `} />
+          {/* <SocialLinks className={`bg-gray-700 hover:bg-green-600 `} /> */}
         </div>
       </div>
     </div>
