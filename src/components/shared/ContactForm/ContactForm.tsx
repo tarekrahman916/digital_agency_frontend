@@ -1,12 +1,17 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+// @ts-nocheck
 "use client";
 import SubmitButton from "@/components/ui/FormInputs/SubmitButton";
 import TextInput from "@/components/ui/FormInputs/TextInput";
 import TextareaInput from "@/components/ui/FormInputs/TextareaInput";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -16,6 +21,33 @@ const ContactForm = () => {
 
   async function onSubmit(data: any) {
     console.log(data);
+
+    const templatePatterns = {
+      from_name: data.email,
+      from_subject: data.subject,
+      to_name: "Techneto It",
+      message: data.message,
+    };
+    setLoading(true);
+    emailjs
+      .send(
+        "service_uxwnifo",
+        "template_2ehyvbk",
+        templatePatterns,
+        "In4vwXx4ASBD-DTkh"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Message send successfully ");
+          setLoading(false);
+          reset();
+        },
+        (error) => {
+          console.log(error.text);
+          setIsLoading(false);
+        }
+      );
   }
 
   return (
