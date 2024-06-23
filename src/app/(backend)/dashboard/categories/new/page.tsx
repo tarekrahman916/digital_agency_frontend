@@ -15,11 +15,11 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-export default function NewProject() {
+export default function NewCategory() {
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [features, setFeatures] = useState([]);
-  const [technologies, setTechnologies] = useState([]);
+  const [technology, setTechnology] = useState([]);
 
   const {
     register,
@@ -36,7 +36,7 @@ export default function NewProject() {
   const router = useRouter();
 
   function redirect() {
-    router.push("/dashboard/projects");
+    router.push("/dashboard/categories");
   }
   const categories = [
     {
@@ -56,26 +56,20 @@ export default function NewProject() {
     /**
     title
     slug
-    category
-    codeLink
-    liveLink
-    features
-    technologies
     imageUrl
-    description
+    descriptions
     isActive
      */
     const slug = generateSlug(data.title);
     data.slug = slug;
     data.image = imageUrl;
     data.features = features;
-    data.technologies = technologies;
     console.log(data);
     makePostRequest(
       setLoading,
-      "api/projects",
+      "api/categories",
       data,
-      "Project",
+      "Category",
       reset,
       redirect
     );
@@ -90,63 +84,23 @@ export default function NewProject() {
       >
         <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
           <TextInput
-            label="Project Title"
+            label="Category Title"
             name="title"
             register={register}
             errors={errors}
-            className="w-full"
           />
-          <SelectInput
-            label="Select Category"
-            name="category"
-            register={register}
-            options={categories}
-            className="w-full"
-          />
-          <TextInput
-            label="Project Live Link"
-            name="liveLink"
-            register={register}
-            errors={errors}
-            className="w-full"
-          />
-          <TextInput
-            label="Project Code Link"
-            name="codeLink"
-            register={register}
-            errors={errors}
-            className="w-full"
-          />
+
           <ImageInput
-            label="Project Image"
+            label="Category Image"
             imageUrl={imageUrl}
             setImageUrl={setImageUrl}
-            endpoint="projectImageUploader"
-          />
-          <ArrayItemsInput
-            items={features}
-            setItems={setFeatures}
-            itemTitle="Project Features"
-          />
-          <ArrayItemsInput
-            items={technologies}
-            setItems={setTechnologies}
-            itemTitle="Project Technology"
+            endpoint="categoryImageUploader"
           />
           <TextareaInput
-            label="Project Description"
+            label="Description"
             name="description"
             register={register}
             errors={errors}
-            isRequired={false}
-          />
-          <ToggleInput
-            label="Project Status"
-            name={"isActive"}
-            isActive={isActive}
-            trueTitle="Active"
-            falseTitle="Draft"
-            register={register}
           />
         </div>
         <SubmitButton

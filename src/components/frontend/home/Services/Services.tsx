@@ -4,17 +4,20 @@ import Link from "next/link";
 import PrimaryHeading from "@/components/ui/Heading/PrimaryHeading";
 import Card from "@/components/ui/Card/Card";
 import SecondaryHeading from "@/components/ui/Heading/SecondaryHeading";
+import { getData } from "@/lib/getData";
 
 const Services = async () => {
-  const res = await fetch(
-    "https://service-provider-backend.vercel.app/api/v1/services",
-    {
-      next: {
-        revalidate: 30,
-      },
-    }
-  );
-  const { data: services } = await res.json();
+  // const res = await fetch(
+  //   "https://service-provider-backend.vercel.app/api/v1/services",
+  //   {
+  //     next: {
+  //       revalidate: 30,
+  //     },
+  //   }
+  // );
+  // const { data: services } = await res.json();
+
+  const services = await getData("services");
 
   return (
     <div className="pt-20 pb-6 lg:px-16 px-5">
@@ -28,11 +31,11 @@ const Services = async () => {
         {services.length > 4
           ? services
               .slice(0, 4)
-              .map((service: Service) => (
-                <Card key={service._id} service={service} />
+              .map((service: any) => (
+                <Card key={service.id} service={service} />
               ))
-          : services.map((service: Service) => (
-              <Card key={service._id} service={service} />
+          : services.map((service: any) => (
+              <Card key={service.id} service={service} />
             ))}
       </div>
       {services.length > 4 && (

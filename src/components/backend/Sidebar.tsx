@@ -1,6 +1,13 @@
 "use client";
 import { Divider, Layout, Menu } from "antd";
-import { Boxes, ExternalLink, Layers, LayoutGrid, Plus } from "lucide-react";
+import {
+  Boxes,
+  ExternalLink,
+  Layers,
+  Layers2,
+  LayoutGrid,
+  Plus,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -23,18 +30,25 @@ export default function Sidebar({
     },
     {
       key: "2",
+      icon: <Layers2 className="w-4 h-4" />,
+      label: "Categories",
+      href: "/dashboard/categories",
+    },
+    {
+      key: "3",
       icon: <Boxes className="w-4 h-4" />,
       label: "Services",
       href: "/dashboard/services",
     },
+
     {
-      key: "3",
+      key: "4",
       icon: <Layers className="w-4 h-4" />,
       label: "Projects",
       href: "/dashboard/projects",
     },
     {
-      key: "4",
+      key: "5",
       label: "Sites",
       icon: <ExternalLink />,
       href: "/",

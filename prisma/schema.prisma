@@ -13,6 +13,65 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Service{
-  id    String    @id @default(auto()) @map("_id") @db.ObjectId
+
+
+
+model Category {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  title      String 
+  slug       String @unique
+  imageUrl  String?
+  description String?
+  isActive Boolean
+
+  services Service[]
+  projects Project[]
+  
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+}
+
+model Service {
+
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  title           String
+  slug            String   @unique
+  shortDescription String?
+  description     String?
+  features        String[]
+  provideServices String[]
+  imageUrl        String?
+  isActive Boolean
+
+  category   Category  @relation(fields: [categoryId], references: [id])
+  categoryId String @db.ObjectId
+  
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
+}
+
+model Project {
+
+
+
+// codeLink
+// liveLink
+
+
+   id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  title           String
+  slug            String   @unique
+  description     String?
+  codeLink        String?
+  liveLink        String?
+  features        String[]
+  technologies    String[]
+  imageUrl        String?
+  isActive Boolean
+
+  category   Category  @relation(fields: [categoryId], references: [id])
+  categoryId String @db.ObjectId
+  
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
 }

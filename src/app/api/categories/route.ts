@@ -3,33 +3,36 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: any) {
   try {
-    const {
-      title,
-      slug,
-      category,
-      codeLink,
-      liveLink,
-      features,
-      imageUrl,
-      isActive,
-    } = await request.json();
-    const newProject = {
-      title,
-      slug,
-      category,
-      codeLink,
-      liveLink,
-      features,
-      imageUrl,
-      isActive,
-    };
-    console.log(newProject);
-    return NextResponse.json(newProject);
+    const { title, slug, imageUrl, description, isActive } =
+      await request.json();
+
+    const existingCategory = await db.category.findUnique({
+      where: {
+        slug,
+      },
+    });
+
+    if (existingCategory) {
+      return NextResponse.json(
+        {
+          data: null,
+          message: "Category already exist",
+        },
+        { status: 409 }
+      );
+    }
+
+    const newCategory = await db.category.create({
+      data: { title, slug, imageUrl, description, isActive },
+    });
+
+    console.log(newCategory);
+    return NextResponse.json(newCategory);
   } catch (error) {
     console.log(error);
     return NextResponse.json(
       {
-        message: "Failed to create Project",
+        message: "Failed to create Category",
         error,
       },
       { status: 500 }

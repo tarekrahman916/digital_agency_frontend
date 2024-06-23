@@ -5,32 +5,32 @@ import { ExternalLink } from "lucide-react";
 import SecondaryButton from "../Button/SecondaryButton";
 import style from "./Card.module.css";
 
-const Card = ({ service }: { service: Service }) => {
+const Card = ({ service }: { service: any }) => {
   return (
     <div
       className={` rounded-md shadow-lg  h-[420px] relative text-gray-800 ${style.card}`}
     >
       <Image
-        src={service.serviceImg ? service.serviceImg : image}
+        src={service.imageUrl ? service.imageUrl : image}
         alt=""
         className="object-cover object-center w-full rounded-t-md  dark:bg-gray-500"
         width={500}
         height={200}
       />
       <div className="flex flex-col   space-y-4 w-full  ">
-        <div className="space-y-2 px-2">
-          <h2 className="text-xl font-bold text-center">{service.name}</h2>
-          <p className="dark:text-gray-100 text-base  text-center w-full">
-            {service.description.length > 80
-              ? service.description.slice(0, 80) + "..."
-              : service.description}
+        <div className="space-y-2 px-2 text-center">
+          <h2 className="text-xl  font-semibold ">{service.title}</h2>
+          <p className="dark:text-gray-100 text-base   w-full">
+            {service.shortDescription.length > 80
+              ? service.shortDescription.slice(0, 80) + "..."
+              : service.shortDescription}
           </p>
         </div>
 
         <div>
           <SecondaryButton
             title="See Details"
-            href={`services/${service._id}`}
+            href={`services/${service.slug}`}
             icon={<ExternalLink />}
             className="w-full flex items-center space-x-2 justify-center absolute bottom-0"
           />

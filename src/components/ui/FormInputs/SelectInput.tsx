@@ -40,7 +40,7 @@ export default function SelectInput({
         >
           {options.map((option, i) => {
             return (
-              <option className="text-gray-900" key={i} value={option.title}>
+              <option className="text-gray-900" key={i} value={option.id}>
                 {option.title}
               </option>
             );
