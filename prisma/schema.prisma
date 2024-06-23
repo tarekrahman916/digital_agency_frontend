@@ -52,12 +52,6 @@ model Service {
 
 model Project {
 
-
-
-// codeLink
-// liveLink
-
-
    id       String    @id @default(auto()) @map("_id") @db.ObjectId
   title           String
   slug            String   @unique
@@ -67,7 +61,7 @@ model Project {
   features        String[]
   technologies    String[]
   imageUrl        String?
-  isActive Boolean
+  isActive        Boolean
 
   category   Category  @relation(fields: [categoryId], references: [id])
   categoryId String @db.ObjectId

@@ -6,6 +6,7 @@ import { CircleCheck, CircleCheckBig } from "lucide-react";
 import BreadCrump from "@/components/ui/BreadCrump";
 import { getData } from "@/lib/getData";
 import { Key } from "react";
+import SocialLinks from "@/components/ui/SocialLinks/SocialLinks";
 
 const page = async ({ params: { slug } }: { params: { slug: any } }) => {
   const service = await getData(`services/${slug}`);
@@ -80,6 +81,12 @@ const page = async ({ params: { slug } }: { params: { slug: any } }) => {
           </div>
         </div>
         <WorkFlow />
+        <div className="bg-slate-50 py-12 px-6 rounded-lg shadow flex flex-col space-y-3 justify-center items-center">
+          <h2 className="text-2xl font-semibold">Have a Project With Us?</h2>
+          <h3 className="text-4xl text-green-600 font-bold">GET IN TOUCH!</h3>
+          <SecondaryButton href="/contact" title="Hire Us" />
+          <SocialLinks className={`bg-gray-700 hover:bg-green-600 `} />
+        </div>
       </div>
     </div>
   );
