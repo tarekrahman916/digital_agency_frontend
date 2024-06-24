@@ -1,4 +1,4 @@
-// @ts-nocheck
+// @ts-ignore
 import { Button } from "antd";
 import { Service } from "@/constant/GlobalTypes";
 import Link from "next/link";
