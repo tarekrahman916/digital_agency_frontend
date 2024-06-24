@@ -1,9 +1,12 @@
 export type Service = {
-  imageUrl: any;
-  _id: string;
-  name: string;
+  id: string;
+  title: string;
+  slug: string;
+  shortDescription: string;
   description: string;
   features: string[];
-  price: number;
-  serviceImg: string;
+  provideServices: string[];
+  imageUrl: string;
+  isActive: boolean;
+  categoryId: string;
 };

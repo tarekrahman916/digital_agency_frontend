@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react";
 import SecondaryButton from "../Button/SecondaryButton";
 import style from "./Card.module.css";
 
-const Card = ({ service }: { service: any }) => {
+const Card = ({ service }: { service: Service }) => {
   return (
     <div
       className={` rounded-md shadow-lg  h-[420px] relative text-gray-800 ${style.card}`}
