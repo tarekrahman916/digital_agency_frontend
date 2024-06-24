@@ -7,7 +7,7 @@ import { getData } from "@/lib/getData";
 import React from "react";
 
 export default async function page() {
-  const services = await getData("services");
+  const services: [] = await getData("services");
   return (
     <div className="pt-40 lg:px-20 px-5">
       <PrimaryHeading title="Our Services" />
