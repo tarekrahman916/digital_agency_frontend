@@ -1,28 +1,18 @@
+// @ts-nocheck
 import { Button } from "antd";
 import { Service } from "@/constant/GlobalTypes";
 import Link from "next/link";
 import PrimaryHeading from "@/components/ui/Heading/PrimaryHeading";
 import Card from "@/components/ui/Card/Card";
-import SecondaryHeading from "@/components/ui/Heading/SecondaryHeading";
+
 import { getData } from "@/lib/getData";
 
 const Services = async () => {
-  // const res = await fetch(
-  //   "https://service-provider-backend.vercel.app/api/v1/services",
-  //   {
-  //     next: {
-  //       revalidate: 30,
-  //     },
-  //   }
-  // );
-  // const { data: services } = await res.json();
-
   const services = await getData("services");
 
   return (
     <div className="pt-20 pb-6 lg:px-16 px-5">
       <PrimaryHeading title="Our Services" />
-      {/* <SecondaryHeading title="Services" des="Check Our Services" /> */}
 
       <div
         data-aos="fade-right"

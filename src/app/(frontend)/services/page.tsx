@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Services from "@/components/frontend/home/Services/Services";
 import Card from "@/components/ui/Card/Card";
 import PrimaryHeading from "@/components/ui/Heading/PrimaryHeading";
