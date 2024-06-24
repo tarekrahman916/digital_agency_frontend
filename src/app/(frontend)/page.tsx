@@ -18,7 +18,7 @@ const HomePage = () => {
       {/* Client */}
       <Client />
       {/* Services */}
-      <Services />
+      {/* <Services /> */}
 
       {/* About Section */}
       <AboutSection />
