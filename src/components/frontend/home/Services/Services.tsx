@@ -1,4 +1,3 @@
-// @ts-ignore
 import { Button } from "antd";
 import { Service } from "@/constant/GlobalTypes";
 import Link from "next/link";
@@ -8,7 +7,7 @@ import Card from "@/components/ui/Card/Card";
 import { getData } from "@/lib/getData";
 
 const Services = async () => {
-  const services = await getData("services");
+  const services: [{}] = await getData("services");
 
   return (
     <div className="pt-20 pb-6 lg:px-16 px-5">
