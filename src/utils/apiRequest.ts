@@ -11,7 +11,8 @@ export async function makePostRequest(
 ) {
   try {
     setLoading(true);
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    // const baseUrl = process.env.BASE_URL;
+    const baseUrl = "https://digital-agency-fawn.vercel.app";
     const response = await fetch(`${baseUrl}/${endpoint}`, {
       method: "POST",
       headers: {

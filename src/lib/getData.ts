@@ -1,5 +1,4 @@
-// @ts-nocheck
-export async function getData(endpoint) {
+export async function getData(endpoint: any) {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     const response = await fetch(`${baseUrl}/api/${endpoint}`, {
