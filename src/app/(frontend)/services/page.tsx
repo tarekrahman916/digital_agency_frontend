@@ -20,6 +20,7 @@ export default async function page() {
           <Card key={service._id} service={service} />
         ))}
       </div> */}
+      <h1>Service page</h1>
     </div>
   );
 }
