@@ -7,7 +7,19 @@ import Card from "@/components/ui/Card/Card";
 import { getData } from "@/lib/getData";
 
 const Services = async () => {
-  const services: Service[] = await getData("services");
+  let services: Service[] = [];
+
+  try {
+    services = await getData("services");
+    console.log("Fetched services:", services);
+  } catch (error) {
+    console.error("Failed to fetch services data:", error);
+  }
+
+  if (!Array.isArray(services)) {
+    console.error("Services is not an array:", services);
+    return <div>Error loading services. Please try again later.</div>;
+  }
 
   return (
     <div className="pt-20 pb-6 lg:px-16 px-5">
@@ -20,7 +32,7 @@ const Services = async () => {
         {services.length > 4
           ? services
               .slice(0, 4)
-              .map((service: any) => (
+              .map((service: Service) => (
                 <Card key={service.id} service={service} />
               ))
           : services.map((service: any) => (
